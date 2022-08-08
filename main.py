@@ -1,3 +1,6 @@
-import sys
+from utils.logging import *
+from config.config import *
 
-print("Hello")
+logger=getloggingSession()
+
+logger.info("This is info log {}".format(conf()))
