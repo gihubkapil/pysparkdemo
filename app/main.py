@@ -1,5 +1,5 @@
-from utils.logging import *
-from config.config import *
+from app.config.config import *
+from app.utils.logging import *
 
 logger=getloggingSession()
 

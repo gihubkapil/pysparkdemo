@@ -1,7 +1,7 @@
 import yaml
 from yaml.loader import SafeLoader
 import os
-from utils.root import get_project_root
+from app.utils.root import get_project_root
 
 root = get_project_root()
 #print(root)
