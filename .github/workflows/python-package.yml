@@ -30,9 +30,7 @@ jobs:
         python -m pip install flake8 pytest wheel
         ls -l
         python setup.py bdist_wheel --universal
-        ls -l
-        mv dist/ ../
-        ls -l
+        ls -l dist/
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
