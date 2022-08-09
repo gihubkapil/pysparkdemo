@@ -35,6 +35,7 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
       with:
+        name: python-demo
         path: dist/
         if-no-files-found: error
     - name: Lint with flake8
