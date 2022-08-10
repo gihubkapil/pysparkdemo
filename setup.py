@@ -5,7 +5,5 @@ setup(
     name='pysparkdemo',
     extras_require=dict(tests=['pytest']),
     packages=['app', 'app.config', 'app.utils'],
-    #packages=find_packages('app'),
-    #package_dir={"": "app"},
     data_files=data_files
 )
