@@ -32,12 +32,6 @@ jobs:
         python setup.py bdist_wheel --universal
         ls -l dist/
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: python-demo
-        path: dist/
-        if-no-files-found: error
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -47,3 +41,9 @@ jobs:
     - name: Test with pytest
       run: |
         python -m pytest
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-demo
+        path: dist/
+        if-no-files-found: error
